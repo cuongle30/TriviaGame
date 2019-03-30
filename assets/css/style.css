@@ -1,0 +1,36 @@
+body {
+    background: URL("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    width: 65%;
+    height: 550px;
+    background: #fffdfd;
+    margin-top: 60px;
+    padding-top: 10px;
+    background: URL("../images/pic.jpg");
+    background-size: cover;
+    color: white; 
+}
+
+#title {
+    color: rgb(228, 220, 220);
+    font-size: 60px;
+    font-weight: bold;
+}
+#answer {
+    color: rgb(126, 214, 130);
+}
+#choices-wrap {
+    margin-left: 370px;
+}
+.score {
+    display: none;
+}
+#quiz{
+    display: none;
+}
+.restart-button {
+    display: none;
+}

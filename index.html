@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row" id="quiz">
+            <div class="col-lg-12 text-center" id="display">
+                <h1 id="title">MARVEL TRIVIA</h1>
+            </div>
+            <div class="col-lg-12 text-center" id="time-remaining-dis">
+                <div id="time-remaining"></div>
+            </div>
+            <div class="col-lg-12 text-center" id="questions-dis">
+                <div id="questions"></div>
+            </div>
+            <div class="col-lg-12 text-center" id="answer-dis">
+                <div id="answer"></div>
+            </div>
+
+            <div class="col-lg-12 text-center" id="choices">
+                <div class="choices text-left" id="choices-wrap">
+                    <div class="col-lg-12">
+                        <div id="choicesA" answer="A"></div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id="choicesB" answer="B"></div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id="choicesC" answer="C"></div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div id="choicesD" answer="D"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+        <div id="picture"></div>
+
+        <div class="col-lg-12 text-center" id="start-display">
+            <button class="start-button" id="start">start</button>
+        </div>
+
+        <div class="col-lg-12 text-center" id="restart-display">
+                <button class="restart-button" id="restart">Restart</button>
+            </div>
+        <div id="total-score" class="score">
+                <div id="correct">correct</div>
+                <div id="incorrect">incorrect</div>
+                <img id="good" src="assets/images/good.gif">
+            </div>
+    </div>
+
+
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+</body>
+
+</html>
