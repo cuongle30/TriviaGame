@@ -20,17 +20,41 @@ body {
     font-weight: bold;
 }
 #answer {
-    color: rgb(126, 214, 130);
+    color: rgb(155, 190, 253);
 }
 #choices-wrap {
     margin-left: 370px;
 }
 .score {
     display: none;
+    margin-bottom: 200px;
 }
-#quiz{
-    display: none;
-}
+
 .restart-button {
     display: none;
+}
+#start {
+    width: 150px;
+    height: 60px;
+    font-size: 35px;
+    margin-top: 10px;
+}
+#good {
+    width: 250px;
+    height: 150px;
+}
+#display {
+    margin-top: -10px;
+}
+#choicesA:hover {
+    background-color: rgb(61, 3, 3);
+}
+#choicesB:hover {
+    background-color: rgb(61, 3, 3);
+}
+#choicesC:hover {
+    background-color: rgb(61, 3, 3);
+}
+#choicesD:hover {
+    background-color: rgb(61, 3, 3);
 }
