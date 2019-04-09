@@ -5,24 +5,28 @@ var questions = [
         choices: [" Caught in a Radioactive explosion.", " He was born with it.", " Bitten by a Radioactive Spider.", " He was part of a science experiment.",],
         correct: "C",
         correct1: " Bitten by a Radioactive Spider.",
+        img: "spiderman.gif"
     },
     {
         question: "What is Captain America's first name?",
         choices: [" Tony", " Steve", " Peter", " Bruce"],
         correct: "B",
         correct1: " Steve",
+        img: "captain-america.gif"
     },
     {
         question: "What is Wolverine's mutant ability? ",
         choices: [" Super Strength.", " Healing.", " Metal Claws.", " Super Speed."],
         correct: "B",
         correct1: " Healing.",
+        img: "wolverine.gif"
     },
     {
         question: "How does the Hulk increase his strength? ",
         choices: [" The longer he fights.", " The more he is hurt.", " The angrier he gets.", " The brighter the sun is."],
         correct: "C",
         correct1: " The angrier he gets.",
+        img: "hulk.gif"
     },
     {
         question: "",
@@ -83,7 +87,10 @@ function stop() {
 startButton.addEventListener("click", getQuestion);
 
 function getQuestion() {
+    //Clear answer when getting new question
     answerDisplay.innerHTML = "";
+    //Clear picture when getting new question
+    pictureDisplay.innerHTML = "";
     //count down interval
     timeRemaining.textContent = "Time Remaining: ";
     timeInterval = setInterval(decrement, 1000);
@@ -120,13 +127,17 @@ function checkAnswer(answer) {
         correct++;
         correctDisplay.innerHTML = `Correct: ${correct}`;//Display score
         answerDisplay.innerHTML = "Right! Correct Answer is: " + questions[currentQuestion].correct1;//Display correct answer
-        // var picture= document.createElement("img");
-        // picture.setAttribute("src", "../images/spiderman.gif", "questions[currentQuestion].images");
-        // pictureDisplay.appendChild(picture);
+        //Create img element and append picture to display
+         var picture= document.createElement("img");
+         picture.setAttribute('src', "assets/images/" + questions[currentQuestion].img);
+         pictureDisplay.appendChild(picture);
         setTimeout(function () { getQuestion(); }, 2000);
         stop();
     } else {
         answerDisplay.innerHTML = "Wrong! Correct Answer is: " + questions[currentQuestion].correct1;
+        var picture= document.createElement("img");
+         picture.setAttribute('src', "assets/images/" + questions[currentQuestion].img);
+         pictureDisplay.appendChild(picture);
         setTimeout(function () { getQuestion(); }, 2000);
         stop();
         incorrect++;
